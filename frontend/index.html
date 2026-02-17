@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sistema para Matrículas 2026</title>
 </head>
+
 <body>
     <main class="container">
         <header>
@@ -13,21 +15,41 @@
         </header>
         <section class="formulario-sessao">
             <form id="formCadastro">
-                
                 <div class="campo">
                     <label for="nome">Nome Completo</label>
-                    <input type="text" id="nome" name="nome" required placeholder="Deivid Silva">
-
-                    <button type="submit">Cadastrar Aluno</button>
-
+                    <input type="text" id="nome" name="nome" required placeholder="Ex: Deivid Silva">
                 </div>
 
+                <div class="campo">
+                    <label for="nascimento">Data de Nascimento</label>
+                    <input type="date" id="nascimento" name="nascimento" required>
+                </div>
+
+                <div class="campo">
+                    <label for="cpf">CPF</label>
+                    <input type="text" id="cpf" name="cpf" required placeholder="000.000.000-00" inputmode="numeric">
+                </div>
+
+                <div class="campo">
+                    <label for="endereco">Endereço Residencial</label>
+                    <input type="text" id="endereco" name="endereco" required
+                        placeholder="Rua, número, bairro e cidade">
+                </div>
+
+                <div class="campo">
+                    <label for="telefone">Telefone</label>
+                    <input type="tel" id="telefone" name="telefone" required placeholder="(00) 00000-0000"
+                        inputmode="tel">
+                </div>
+
+                <button type="submit">Cadastrar Aluno</button>
             </form>
         </section>
     </main>
 
-    <footer> 
+    <footer>
         <p>Desenvolvido por D.O.S</p>
     </footer>
 </body>
+
 </html>

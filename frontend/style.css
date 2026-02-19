@@ -1,0 +1,118 @@
+/* 1. VARIÁVEIS DO SISTEMA (Centraliza cores e medidas) */
+:root {
+    --cor-fundo: #f0f2f5;
+    --cor-card: #ffffff;
+    --cor-primaria: #2c3e50;
+    --cor-sucesso: #27ae60;
+    --cor-sucesso-hover: #219150;
+    --cor-texto: #333333;
+    --cor-borda: #dddddd;
+    --borda-raio: 8px;
+}
+
+/* 2. RESET E BASE */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Borda e padding não aumentam o tamanho da caixa */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--cor-fundo);
+    display: flex;             /* Ativa Flexbox para centralizar tudo */
+    flex-direction: column;    /* Coloca o container e o footer em coluna */
+    justify-content: center;   /* Centraliza horizontalmente */
+    align-items: center;       /* Centraliza verticalmente */
+    min-height: 100vh;         /* Ocupa a altura total da tela */
+    padding: 20px;
+    color: var(--cor-texto);
+}
+
+/* 3. CONTAINER DO FORMULÁRIO */
+.container {
+    background-color: var(--cor-card);
+    padding: 2rem;
+    border-radius: var(--borda-raio);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 500px; /* Largura máxima profissional para desktop */
+}
+
+header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+h1 {
+    color: var(--cor-primaria);
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+/* 4. ESTILO DOS CAMPOS INDIVIDUAIS */
+.campo {
+    margin-bottom: 1.2rem;
+    display: flex;
+    flex-direction: column; /* Rótulo em cima, caixa embaixo */
+}
+
+label {
+    font-weight: 600;
+    margin-bottom: 0.3rem;
+    font-size: 0.9rem;
+}
+
+input {
+    padding: 0.75rem;
+    border: 1px solid var(--cor-borda);
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+/* Efeito ao clicar no campo */
+input:focus {
+    outline: none;
+    border-color: var(--cor-primaria);
+}
+
+/* 5. LAYOUT LADO A LADO (FLEXBOX) */
+.campo-grupo-linha {
+    display: flex;
+    gap: 15px; /* Espaço entre Numero e Bairro */
+    width: 100%;
+}
+
+.campo-grupo-linha .campo {
+    flex: 1; /* Divide o espaço da linha igualmente */
+}
+
+/* Ajuste específico para o campo de número não ser largo demais */
+#endereco-numero {
+    max-width: 100px;
+}
+
+/* 6. BOTÃO DE AÇÃO */
+button {
+    width: 100%;
+    padding: 1rem;
+    background-color: var(--cor-sucesso);
+    color: white;
+    border: none;
+    border-radius: var(--borda-raio);
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background-color: var(--cor-sucesso-hover);
+}
+
+/* 7. RODAPÉ */
+footer {
+    margin-top: 2rem;
+    font-size: 0.8rem;
+    color: #888;
+}

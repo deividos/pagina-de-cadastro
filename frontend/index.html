@@ -1,23 +1,23 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sistema para Matrículas 2026</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
     <main class="container">
         <header>
             <h1>Cadastro de Alunos - 2026</h1>
             <p>Preencha as informações para gerar um novo cadastro com número de matrícula</p>
         </header>
+
         <section class="formulario-sessao">
             <form id="formCadastro">
                 <div class="campo">
                     <label for="nome">Nome Completo</label>
-                    <input type="text" id="nome" name="nome" required placeholder="Ex: Deivid Silva">
+                    <input type="text" id="nome" name="nome" required placeholder="Ex: João da Silva">
                 </div>
 
                 <div class="campo">
@@ -31,15 +31,34 @@
                 </div>
 
                 <div class="campo">
-                    <label for="endereco">Endereço Residencial</label>
-                    <input type="text" id="endereco" name="endereco" required
-                        placeholder="Rua, número, bairro e cidade">
+                    <label for="endereco-cep">CEP</label>
+                    <input type="text" id="endereco-cep" name="endereco-cep" required placeholder="00000-000" inputmode="numeric">
+                </div>
+
+                <div class="campo">
+                    <label for="endereco-rua">Rua</label>
+                    <input type="text" id="endereco-rua" name="endereco-rua" required placeholder="Nome da rua">
+                </div>
+
+                <div class="campo-grupo-linha">
+                    <div class="campo">
+                        <label for="endereco-numero">Número</label>
+                        <input type="text" id="endereco-numero" name="endereco-numero" required placeholder="Nº">
+                    </div>
+                    <div class="campo">
+                        <label for="endereco-bairro">Bairro</label>
+                        <input type="text" id="endereco-bairro" name="endereco-bairro" required placeholder="Bairro">
+                    </div>
+                </div>
+
+                <div class="campo">
+                    <label for="endereco-cidade">Cidade</label>
+                    <input type="text" id="endereco-cidade" name="endereco-cidade" required placeholder="Cidade">
                 </div>
 
                 <div class="campo">
                     <label for="telefone">Telefone</label>
-                    <input type="tel" id="telefone" name="telefone" required placeholder="(00) 00000-0000"
-                        inputmode="tel">
+                    <input type="tel" id="telefone" name="telefone" required placeholder="(00) 00000-0000" inputmode="tel">
                 </div>
 
                 <button type="submit">Cadastrar Aluno</button>
@@ -48,8 +67,7 @@
     </main>
 
     <footer>
-        <p>Desenvolvido por D.O.S</p>
+        <p>Desenvolvido por D.O.S | Engenharia de Software 2026</p>
     </footer>
 </body>
-
 </html>
